@@ -1,4 +1,4 @@
-console.log('AOC 9');
+console.log('AOC 9b');
 
 const fs = require('node:fs');
 const { Subject } = require("rxjs");
