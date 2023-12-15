@@ -51,7 +51,7 @@ function getGalaxyGalaxyDistance(galaxy1, galaxy2) {
     return Math.abs(galaxy1.x - galaxy2.x) + Math.abs(galaxy1.y - galaxy2.y);
 }
 
-fs.readFile('1030.txt', 'utf8', (err, data) => {
+fs.readFile('1030b.txt', 'utf8', (err, data) => {
     if (err) {
         console.error(err);
         return;

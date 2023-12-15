@@ -82,7 +82,7 @@ function getChecksum(condition) {
     return condition.match(/([.#])\1*/g).filter(s => s.startsWith('#')).map(s => s.length);
 }
 
-fs.readFile('aoc-012.txt', 'utf8', (err, data) => {
+fs.readFile('525152b.txt', 'utf8', (err, data) => {
     if (err) {
         console.error(err);
         return;
