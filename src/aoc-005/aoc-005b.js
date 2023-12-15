@@ -16,6 +16,7 @@ const mapNames = [
 
 const dataObserver = {
     next: (data) => {
+        console.time('AOC 5b');
         const seedData = data.split('\n').filter((line) => !!line).reduce(reduceLine, {
             'identity-mapping:': [{
                 mapStart: 0,
@@ -27,6 +28,7 @@ const dataObserver = {
             }]
         });
         console.log(Math.min(...processSeedData(seedData)));
+        console.timeEnd('AOC 5b');
     }
 };
 
@@ -137,7 +139,6 @@ function processSeedData(data) {
 
 //endregion
 
-console.time('AOC 5b');
 fs.readFile('46b.txt', 'utf8', (err, data) => {
     if (err) {
         console.error(err);
@@ -145,7 +146,6 @@ fs.readFile('46b.txt', 'utf8', (err, data) => {
     }
     processor.next(data);
 });
-console.timeEnd('AOC 5b');
 
 const processor = new Subject();
 processor.asObservable().subscribe(dataObserver);
