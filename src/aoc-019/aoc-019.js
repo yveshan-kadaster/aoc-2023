@@ -78,4 +78,3 @@ fs.readFile('19114.txt', 'utf8', (err, data) => {
 
 const processor = new Subject();
 processor.asObservable().subscribe(dataObserver);
-//167409079868000
