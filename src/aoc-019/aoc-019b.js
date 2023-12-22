@@ -1,4 +1,4 @@
-const id = 'AOC 19';
+const id = 'AOC 19b';
 console.log(id);
 
 const fs = require('node:fs');
